@@ -1,8 +1,15 @@
 import React from 'react'
 
+const searchStyles = {
+    position: 'fixed',
+    bottom: '2vh',
+    marginLeft: '5vw'
+}
 const Search = () => {
     return (
-    <input></input>
+        <div style={searchStyles}>
+            <input></input>
+        </div>
 )
 }
 

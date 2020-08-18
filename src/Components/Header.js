@@ -1,24 +1,32 @@
 import React from 'react'
-import Search from './Search'
+
 import { Link, withRouter } from 'react-router-dom'
 
 const headerStyle = {
-    width: '100%',
-    height: '400px',
+    width: '100vw',
+    height: '15vh',
     margin: '0 0 0 0',
-    backgroundImage: 'url("abstract-black-and-white-blur-book-261763.jpg")',
     backgroundSize: '100%',
-    overflow: 'auto',
-    fontSize: '300%'
+    position: 'fixed',
+    textAlign: 'center'
 }
 const linkStyle = {
     color: '#180836',
     fontFamily: 'Marck Script, cursive',
-    marginLeft: '2%',
-    textDecoration: 'none'
+    fontSize: '6vh',
+    textDecoration: 'none',
+    textShadow: '0 0 10px #ffff4d'
 }
-const searchStyle = {
 
+const h3Style = {
+    margin: '0',
+    textShadow: '0 0 2px #ffffff'
+}
+const h2Style = {
+    fontFamily: 'Marck Script, cursive',
+    margin: '0',
+    color: '#180836',
+    textShadow: '0 0 10px #ffff4d'
 }
 
 const Header = () => {
@@ -28,7 +36,8 @@ return (
             to='/'>
             Growing Up Broken
         </Link>
-        <Search />
+        <h3 style={h3Style}> a collection of original writing by </h3>
+        <h2 style={h2Style}>Breena Byerly</h2>
     </div>
 )
 

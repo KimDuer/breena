@@ -3,18 +3,32 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import Landing from './Landing'
 import LogIn from './BUI/LogIn'
-import Header from './Header'
+import Gallery from './BUI/Gallery'
+import NewEntry from './BUI/NewEntry'
 
+
+
+const backgroundStyles = {
+    backgroundImage: 'linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, 0)), url("public/abstract-black-and-white-blur-book-261763.jpg")',
+    backgroundSize: 'fill',
+    backgroundRepeat: 'no-repeat',
+    width: '100vw',
+    height: '100vh',
+    position: 'fixed',
+    overflow: 'auto'
+}
 
 const App = () => {
     return (
-        <div>
+        <div style={backgroundStyles}>
             
             <BrowserRouter>
-                <Header />
+
                 <Switch>
                     <Route path="/" component={Landing} exact={true}/>
-                    <Route path="/breena" component={LogIn} />
+                    <Route path="/login" component={LogIn} />
+                    <Route path="/breena/entry-form" component={NewEntry} />
+                    <Route path="/breena" component={Gallery} />
                 </Switch>
                 
             </BrowserRouter>

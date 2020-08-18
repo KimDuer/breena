@@ -10,9 +10,11 @@
     "dev-server": "webpack-dev-server"
   },
   "dependencies": {
-    "firebase": "^7.14.6",
+    "firebase": "^7.16.1",
+    "prop-types": "^15.7.2",
     "react-redux-firebase": "^3.5.1",
     "react-router-dom": "^5.2.0",
+    "recompose": "^0.30.0",
     "redux-firestore": "^0.13.0",
     "redux-thunk": "^2.3.0",
     "validator": "8.0.0"
