@@ -1,9 +1,9 @@
 import React from 'react'
 
 const searchStyles = {
-    position: 'fixed',
-    bottom: '2vh',
-    marginLeft: '5vw'
+    display: 'flex',
+    justifyContent: 'center',
+    paddingTop: '2vh'
 }
 const Search = () => {
     return (

@@ -27,8 +27,11 @@ const App = () => {
                 <Switch>
                     <Route path="/" component={Landing} exact={true}/>
                     <Route path="/login" component={LogIn} />
-                    <Route path="/breena/entry-form" component={NewEntry} />
-                    <Route path="/breena" component={Gallery} />
+                    <Route path="/new-entry" component={NewEntry} />
+                    <Route path="/gallery/:title">
+                        <Landing location={location} />
+                    </Route>
+                    <Route path="/gallery" component={Gallery} />
                 </Switch>
                 
             </BrowserRouter>

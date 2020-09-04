@@ -6,6 +6,7 @@ const headerStyle = {
     width: '100vw',
     height: '15vh',
     margin: '0 0 0 0',
+    top: '2vh',
     backgroundSize: '100%',
     position: 'fixed',
     textAlign: 'center'

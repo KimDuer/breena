@@ -9,6 +9,7 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import thunk from 'redux-thunk'
 import { ReactReduxFirebaseProvider, firebaseReducer } from 'react-redux-firebase'
+import { entryReducer } from './Redux/entry-reducer'
 
 const firebaseConfig = {
     apiKey: "AIzaSyCkz8md-YLbOtLaYlVn_rXL11Sujsrw2ro",
@@ -25,7 +26,8 @@ firebase.firestore()
 
 const rootReducer = combineReducers({
   firebase: firebaseReducer,
-  firestore: firestoreReducer
+  firestore: firestoreReducer,
+  entry: entryReducer
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
