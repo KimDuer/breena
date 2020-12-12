@@ -7,33 +7,38 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "test": "jest"
   },
   "dependencies": {
-    "firebase": "^7.16.1",
+    "firebase": "^8.1.1",
     "prop-types": "^15.7.2",
-    "react-redux-firebase": "^3.5.1",
+    "react-redux-firebase": "^3.8.1",
     "react-router-dom": "^5.2.0",
     "recompose": "^0.30.0",
-    "redux-firestore": "^0.13.0",
+    "redux-firestore": "^0.14.0",
     "redux-thunk": "^2.3.0",
-    "validator": "8.0.0"
+    "validator": "13.5.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.2",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@testing-library/react": "^11.2.2",
     "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.5",
+    "babel-loader": "^8.2.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-modal": "^3.11.2",
-    "react-redux": "^7.2.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "jest": "^26.6.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.12.1",
+    "react-redux": "^7.2.2",
+    "react-test-renderer": "^17.0.1",
     "redux": "^4.0.5",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "style-loader": "^2.0.0",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
   }
 }
