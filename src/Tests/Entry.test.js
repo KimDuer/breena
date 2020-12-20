@@ -1,7 +1,7 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 
-import App from '../Components/App'
+import Entry from '../Components/Entry'
 
 import { Provider } from 'react-redux'
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
@@ -48,13 +48,15 @@ const rrfProps = {
     createFirestoreInstance
 }
 
-describe('App', () => {
-    test('renders App component', () => {
+
+describe('Entry', () => {
+    test('renders Entry component', () => {
         render(
         <Provider store={Store}>
             <ReactReduxFirebaseProvider {...rrfProps}>
-                <App />
-            </ReactReduxFirebaseProvider>
+                <Entry />
+            </ReactReduxFirebaseProvider >
         </Provider>)
+        screen.debug()
     })
 })

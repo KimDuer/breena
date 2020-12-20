@@ -1,10 +1,16 @@
-import { TestScheduler } from 'jest'
 import React from 'react'
-import ReactShallowRenderer from 'react-test-renderer/shallow'
+import { render, screen } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
+
 import Header from '../../Components/Header'
 
-test('should render Header correctly', () => {
-    const renderer = new ReactShallowRenderer
-    ReactShallowRenderer.createRenderer(<Header />)
-    expect(renderer.getRenderOutput()).toMatchSnapshot()
+describe('Header', () => {
+    test('renders Header component', () => {
+        render(<MemoryRouter><Header /></MemoryRouter>)
+
+        expect(screen.getByText('Growing Up Broken'))
+        expect(screen.getByText('a collection of original writing by'))
+        expect(screen.getByText('Breena Byerly'))
+
+    })
 })
